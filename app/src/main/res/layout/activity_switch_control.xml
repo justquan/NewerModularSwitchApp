@@ -5,14 +5,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.jnicquangmail.modularsmartswitch.SwitchControl">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text= "@string/MSS"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <SeekBar
         android:layout_width="wrap_content"
@@ -42,46 +34,46 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/seekBar"
+        android:layout_marginTop="37dp"
+        android:text="ON"
+        android:layout_below="@+id/moduleChooser"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/seekBar"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="30dp"
-        android:text="ON" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OFF"
         android:id="@+id/button3"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="46dp"
         android:layout_below="@+id/button2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Disconnect"
         android:id="@+id/button4"
-        android:layout_below="@+id/seekBar"
+        android:layout_alignBaseline="@+id/triggerStateToggle"
+        android:layout_alignBottom="@+id/triggerStateToggle"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lumn"
+        android:id="@+id/valueBox"
         android:layout_alignTop="@+id/textView3"
-        android:layout_toRightOf="@+id/button4"
-        android:layout_marginLeft="6dp"
-        android:layout_marginStart="6dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/seekBar" />
+        android:layout_above="@+id/seekBar"
+        android:layout_toRightOf="@+id/recdata"
+        android:layout_toEndOf="@+id/recdata" />
 
     <ToggleButton
         android:id="@+id/triggerStateToggle"
@@ -89,25 +81,42 @@
         android:layout_height="wrap_content"
         android:checked="false"
         android:text="Trigger State"
-        android:layout_alignBaseline="@+id/button4"
-        android:layout_alignBottom="@+id/button4"
+        android:layout_alignBottom="@+id/recdata"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="23dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recdata"
-        android:layout_toEndOf="@+id/triggerStateToggle"
-        android:layout_toRightOf="@+id/triggerStateToggle"
-        android:text="TextView" />
+        android:text="TextView"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/recdata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:text="no data received yet"
+        android:layout_above="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:text="no data received yet" />
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/spinnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/select_module"
+        android:layout_alignParentLeft="true" />
+
+    <Spinner
+        android:id="@+id/moduleChooser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/spinnerText" />
+
+
 </RelativeLayout>
