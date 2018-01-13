@@ -26,35 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button3"
+        android:layout_below="@+id/relayToggle"
         android:layout_marginTop="42dp"
         android:text="Send Value"
-        android:textAppearance="@style/?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:text="ON"
-        android:layout_below="@+id/moduleChooser"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OFF"
-        android:id="@+id/button3"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -74,8 +50,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_above="@+id/seekBar"
-        android:layout_toRightOf="@+id/recdata"
-        android:layout_toEndOf="@+id/recdata"
         android:visibility="invisible"/>
 
     <ToggleButton
@@ -84,28 +58,22 @@
         android:layout_height="wrap_content"
         android:checked="false"
         android:text="Trigger State"
-        android:layout_alignBottom="@+id/recdata"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="23dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/seekBarTitle"
-        android:layout_toEndOf="@+id/seekBarTitle" />
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_toLeftOf="@+id/moduleChooser"
+        android:layout_toStartOf="@+id/moduleChooser"
+        android:textOff="Open"
+        android:textOn="Closed" />
 
     <TextView
         android:id="@+id/recdata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="no data received yet"
-        android:layout_above="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button4"
+        android:layout_toStartOf="@+id/button4" />
 
     <TextView
         android:id="@+id/spinnerText"
@@ -119,7 +87,32 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/spinnerText" />
+        android:layout_toEndOf="@+id/spinnerText"
+        android:layout_toRightOf="@+id/spinnerText" />
+
+    <ToggleButton
+        android:id="@+id/relayToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="Switch Open"
+        android:textOn="Switch Closed"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/moduleChooser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:id="@+id/strobeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/relayToggle"
+        android:layout_alignBottom="@+id/relayToggle"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
+        android:layout_toEndOf="@+id/relayToggle"
+        android:layout_toRightOf="@+id/relayToggle"
+        android:text="Strobe" />
 
 
 </RelativeLayout>
