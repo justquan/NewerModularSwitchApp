@@ -9,11 +9,11 @@
     <SeekBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/seekBar"
+        android:id="@+id/switch_control_value_bar"
         android:max="255"
         android:progress="1"
         android:indeterminate="false"
-        android:layout_below="@+id/seekBarTitle"
+        android:layout_below="@+id/switch_control_value_bar_title"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -21,12 +21,12 @@
         android:visibility="invisible"/>
 
     <TextView
-        android:id="@+id/seekBarTitle"
+        android:id="@+id/switch_control_value_bar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/relayToggle"
+        android:layout_below="@+id/switch_control_relay_toggle_toggle"
         android:layout_marginTop="42dp"
         android:text="Send Value"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -36,82 +36,82 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Disconnect"
-        android:id="@+id/button4"
-        android:layout_alignBaseline="@+id/triggerStateToggle"
-        android:layout_alignBottom="@+id/triggerStateToggle"
+        android:id="@+id/switch_control_disconnect_btn"
+        android:layout_alignBaseline="@+id/switch_control_trigger_state_toggle"
+        android:layout_alignBottom="@+id/switch_control_trigger_state_toggle"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
+        android:id="@+id/switch_control_value_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/valueBox"
-        android:layout_alignTop="@+id/seekBarTitle"
-        android:layout_alignParentRight="true"
+        android:layout_above="@+id/switch_control_value_bar"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/seekBar"
-        android:visibility="invisible"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/seekBarTitle"
+        android:visibility="invisible" />
 
     <ToggleButton
-        android:id="@+id/triggerStateToggle"
+        android:id="@+id/switch_control_trigger_state_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="false"
         android:text="Trigger State"
         android:layout_marginTop="32dp"
-        android:layout_below="@+id/seekBar"
-        android:layout_toLeftOf="@+id/moduleChooser"
-        android:layout_toStartOf="@+id/moduleChooser"
+        android:layout_below="@+id/switch_control_value_bar"
+        android:layout_toLeftOf="@+id/switch_control_module_chooser_spinner"
+        android:layout_toStartOf="@+id/switch_control_module_chooser_spinner"
         android:textOff="Open"
         android:textOn="Closed" />
 
     <TextView
-        android:id="@+id/recdata"
+        android:id="@+id/switch_control_receive_data_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="no data received yet"
-        android:layout_marginBottom="54dp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/button4"
-        android:layout_toStartOf="@+id/button4" />
+        android:layout_marginBottom="54dp"
+        android:layout_toLeftOf="@+id/switch_control_disconnect_btn"
+        android:layout_toStartOf="@+id/switch_control_disconnect_btn"
+        android:text="no data received yet" />
 
     <TextView
-        android:id="@+id/spinnerText"
+        android:id="@+id/switch_control_spinner_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text= "@string/select_module"
         android:layout_alignParentLeft="true" />
 
     <Spinner
-        android:id="@+id/moduleChooser"
+        android:id="@+id/switch_control_module_chooser_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_toEndOf="@+id/spinnerText"
-        android:layout_toRightOf="@+id/spinnerText" />
+        android:layout_toEndOf="@+id/switch_control_spinner_text"
+        android:layout_toRightOf="@+id/switch_control_spinner_text" />
 
     <ToggleButton
-        android:id="@+id/relayToggle"
+        android:id="@+id/switch_control_relay_toggle_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ToggleButton"
         android:textOff="Switch Open"
         android:textOn="Switch Closed"
         android:layout_marginTop="24dp"
-        android:layout_below="@+id/moduleChooser"
+        android:layout_below="@+id/switch_control_module_chooser_spinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <CheckBox
-        android:id="@+id/strobeBox"
+        android:id="@+id/switch_control_strobe_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/relayToggle"
-        android:layout_alignBottom="@+id/relayToggle"
+        android:layout_alignBaseline="@+id/switch_control_relay_toggle_toggle"
+        android:layout_alignBottom="@+id/switch_control_relay_toggle_toggle"
         android:layout_marginLeft="34dp"
         android:layout_marginStart="34dp"
-        android:layout_toEndOf="@+id/relayToggle"
-        android:layout_toRightOf="@+id/relayToggle"
+        android:layout_toEndOf="@+id/switch_control_relay_toggle_toggle"
+        android:layout_toRightOf="@+id/switch_control_relay_toggle_toggle"
         android:text="Strobe" />
 
 
