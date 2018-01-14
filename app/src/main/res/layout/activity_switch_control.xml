@@ -69,11 +69,11 @@
         android:id="@+id/switch_control_receive_data_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:text="no data received yet"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="54dp"
-        android:layout_toLeftOf="@+id/switch_control_disconnect_btn"
-        android:layout_toStartOf="@+id/switch_control_disconnect_btn"
-        android:text="no data received yet" />
+        android:layout_alignLeft="@+id/switch_control_strobe_checkbox"
+        android:layout_alignStart="@+id/switch_control_strobe_checkbox" />
 
     <TextView
         android:id="@+id/switch_control_spinner_text"
@@ -110,7 +110,6 @@
         android:layout_alignBottom="@+id/switch_control_relay_toggle_toggle"
         android:layout_marginLeft="34dp"
         android:layout_marginStart="34dp"
-        android:layout_toEndOf="@+id/switch_control_relay_toggle_toggle"
         android:layout_toRightOf="@+id/switch_control_relay_toggle_toggle"
         android:text="Strobe" />
 
