@@ -47,7 +47,7 @@
 
     <TextView
         android:id="@+id/switch_control_value_box"
-        android:layout_width="60dp"
+        android:layout_width="90dp"
         android:layout_height="30dp"
         android:visibility="invisible"
         android:layout_above="@+id/switch_control_value_bar"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="No Data"
-        android:layout_alignTop="@+id/switch_control_sleep_toggle"
+        android:layout_alignTop="@+id/switch_control_sleep_btn"
         android:layout_alignLeft="@+id/switch_control_trigger_state_toggle"
         android:layout_alignStart="@+id/switch_control_trigger_state_toggle"
         android:layout_alignParentBottom="true"
@@ -121,8 +121,8 @@
         android:text="Strobe" />
 
 
-    <ToggleButton
-        android:id="@+id/switch_control_sleep_toggle"
+    <Button
+        android:id="@+id/switch_control_sleep_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sleep"
@@ -164,7 +164,7 @@
 
     <TextView
         android:id="@+id/switch_control_value_box2"
-        android:layout_width="60dp"
+        android:layout_width="90dp"
         android:layout_height="30dp"
         android:visibility="invisible"
         android:layout_above="@+id/switch_control_value_bar2"
