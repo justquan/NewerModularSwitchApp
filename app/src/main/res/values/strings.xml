@@ -13,7 +13,7 @@
         <item>Motion</item>
         <item>Smoke</item>
         <item>Volume</item>
-        <item>Temperature</item>
+        <item>T and H</item>
     </string-array>
 
 </resources>

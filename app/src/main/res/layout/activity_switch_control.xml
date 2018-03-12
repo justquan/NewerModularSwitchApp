@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/switch_control_value_bar_title"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -17,7 +18,9 @@
         android:layout_marginBottom="0dp"
         android:text="Send Value"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:visibility="invisible" />
+        android:visibility="visible"
+        android:layout_toLeftOf="@+id/switch_control_disconnect_btn"
+        android:layout_toStartOf="@+id/switch_control_disconnect_btn" />
 
     <SeekBar
         android:id="@+id/switch_control_value_bar"
@@ -32,7 +35,7 @@
         android:indeterminate="false"
         android:max="255"
         android:progress="1"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
 
     <Button
@@ -49,7 +52,7 @@
         android:id="@+id/switch_control_value_box"
         android:layout_width="90dp"
         android:layout_height="30dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_above="@+id/switch_control_value_bar"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -58,28 +61,37 @@
         android:id="@+id/switch_control_trigger_state_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="Trigger State"
-        android:textOff="Open"
-        android:textOn="Closed"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:textOff="Trigger to Open"
+        android:textOn="Trigger to Close"
         android:layout_below="@+id/switch_control_value_bar2"
-        android:layout_toLeftOf="@+id/switch_control_module_chooser_spinner"
-        android:layout_toStartOf="@+id/switch_control_module_chooser_spinner" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/switch_control_receive_data_box_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Sensor Output"
+        android:layout_above="@+id/switch_control_receive_data_box"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
 
     <TextView
         android:id="@+id/switch_control_receive_data_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:text="No Data"
         android:layout_alignTop="@+id/switch_control_sleep_btn"
         android:layout_alignLeft="@+id/switch_control_trigger_state_toggle"
         android:layout_alignStart="@+id/switch_control_trigger_state_toggle"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/switch_control_disconnect_btn"
-        android:layout_toStartOf="@+id/switch_control_disconnect_btn" />
+        android:layout_toStartOf="@+id/switch_control_value_box2"
+        android:layout_toLeftOf="@+id/switch_control_value_box2" />
 
     <TextView
         android:id="@+id/switch_control_spinner_text"
@@ -90,6 +102,7 @@
 
     <Spinner
         android:id="@+id/switch_control_module_chooser_spinner"
+        android:layout_marginLeft="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -151,6 +164,7 @@
 
     <TextView
         android:id="@+id/switch_control_value_bar_title2"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -160,7 +174,9 @@
         android:layout_marginBottom="0dp"
         android:text="Send Value 2"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_toLeftOf="@+id/switch_control_disconnect_btn"
+        android:layout_toStartOf="@+id/switch_control_disconnect_btn" />
 
     <TextView
         android:id="@+id/switch_control_value_box2"
@@ -168,6 +184,19 @@
         android:layout_height="30dp"
         android:visibility="invisible"
         android:layout_above="@+id/switch_control_value_bar2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ToggleButton
+        android:id="@+id/switch_control_two_mode_toggle"
+        android:checked="false"
+        android:visibility="invisible"
+        android:textOff="Temp"
+        android:textOn="Humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Two Modes"
+        android:layout_below="@+id/switch_control_trigger_state_toggle"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
