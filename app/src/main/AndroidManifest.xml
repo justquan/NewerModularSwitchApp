@@ -22,7 +22,8 @@
         </activity>
         <activity
             android:name=".SwitchControl"
-            android:label="Switch Control" >
+            android:label="Switch Control"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
